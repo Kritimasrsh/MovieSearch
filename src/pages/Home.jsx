@@ -12,7 +12,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const { hash } = useLocation();
 
-  // 🖱️ Hash scrolling
+  // Hash scrolling
   useEffect(() => {
     if (hash) {
       setTimeout(() => {
@@ -26,7 +26,7 @@ export default function Home() {
     }
   }, [hash, trending, topRated]);
 
-  // 🎬 Load home data
+  //  Load home data
   useEffect(() => {
     const fetchHomeData = async () => {
       try {
@@ -46,7 +46,7 @@ export default function Home() {
     fetchHomeData();
   }, []);
 
-  // 🔍 Search (debounced)
+  // Search (debounced)
   useEffect(() => {
     const timer = setTimeout(() => {
       if (query.trim()) {
@@ -82,7 +82,7 @@ export default function Home() {
         </p>
       </div>
 
-      {/* 🔍 SEARCH */}
+      {/*  SEARCH */}
       <div style={{ textAlign: "center", marginBottom: "30px" }}>
         <input
           type="text"
@@ -93,7 +93,7 @@ export default function Home() {
         />
       </div>
 
-      {/* 🎬 HERO */}
+      {/* HERO */}
       {!query && featured && (
         <div style={styles.hero}>
           <img
@@ -111,7 +111,7 @@ export default function Home() {
         </div>
       )}
 
-      {/* 🔍 SEARCH RESULTS */}
+      {/*  SEARCH RESULTS */}
       {query && (
         <>
           <h2 style={styles.sectionTitle}>🔍 Search Results</h2>
@@ -126,7 +126,7 @@ export default function Home() {
         </>
       )}
 
-      {/* 🔥 HOME SECTIONS (HORIZONTAL SCROLL) */}
+      {/*  HOME SECTIONS (HORIZONTAL SCROLL) */}
       {!query && (
         <>
           <h2 id="trending" style={styles.sectionTitle}>Trending Now</h2>
@@ -161,7 +161,7 @@ export default function Home() {
   );
 }
 
-/* 🎨 STYLES */
+/*  STYLES */
 const styles = {
   page: {
     padding: "20px",

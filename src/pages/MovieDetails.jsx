@@ -61,26 +61,26 @@ export default function MovieDetails() {
 
   return (
     <div style={page}>
-      {/* 🔙 BACK */}
+      {/*  back */}
       <button style={backBtn} onClick={() => navigate(-1)}>
         ← Back
       </button>
 
       <div style={container}>
-        {/* 🎬 POSTER */}
+        {/*  poster */}
         <img
           src={`https://image.tmdb.org/t/p/w400${movie.poster_path}`}
           style={poster}
           alt={movie.title}
         />
 
-        {/* INFO */}
+        {/* info */}
         <div style={info}>
           <h1 style={{ marginBottom: "5px" }}>{movie.title}</h1>
           <p style={{ color: "gold", margin: "0 0 15px 0", fontSize: "18px" }}>⭐ {movie.vote_average}</p>
           <p style={{ lineHeight: "1.6", color: "var(--text-color)" }}>{movie.overview}</p>
 
-          {/* 🎥 TRAILER */}
+          {/* trailer*/}
           {trailer && (
             <a
               href={`https://www.youtube.com/watch?v=${trailer.key}`}
@@ -92,7 +92,7 @@ export default function MovieDetails() {
             </a>
           )}
 
-          {/* 📺 WATCH LINKS */}
+          {/* watch links */}
           <h3 style={{ marginTop: "35px", color: "var(--text-secondary)" }}>📺 Where to Watch</h3>
           {providers?.flatrate ? (
             <div style={providersRow}>
@@ -120,7 +120,7 @@ export default function MovieDetails() {
         </div>
       </div>
 
-      {/* 👥 CAST */}
+      {/* cast */}
       {cast.length > 0 && (
         <div style={{ marginTop: "50px" }}>
           <h2 style={{ borderBottom: "1px solid var(--border-color)", paddingBottom: "10px", color: "var(--text-secondary)" }}>Top Cast</h2>
@@ -140,7 +140,7 @@ export default function MovieDetails() {
         </div>
       )}
 
-      {/* 🍿 SIMILAR MOVIES */}
+      {/* similar movies*/}
       {similar.length > 0 && (
         <div style={{ marginTop: "50px" }}>
           <h2 style={{ borderBottom: "1px solid var(--border-color)", paddingBottom: "10px", color: "var(--text-secondary)" }}>Similar Movies</h2>
@@ -158,7 +158,7 @@ export default function MovieDetails() {
   );
 }
 
-/* 🎨 STYLES */
+/* styles */
 const page = {
   padding: "30px",
   maxWidth: "1200px",
